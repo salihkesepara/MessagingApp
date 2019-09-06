@@ -66,7 +66,8 @@ export default class SignUp extends Component {
               this.props.navigation.navigate('App');
             });
           },
-          () => {
+          (err) => {
+            console.log('Login Failure: ', err);
             this.setState({status: status.FAILURE});
           },
         );

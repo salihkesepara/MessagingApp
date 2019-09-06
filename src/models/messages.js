@@ -64,7 +64,7 @@ export const actions = {
             dispatch({type: SAVE_MESSAGES_SUCCESS, payload: list});
           },
           err => {
-            console.error('getMessages: ', err);
+            console.log('getMessages: ', err);
             dispatch({type: SAVE_MESSAGES_FAILURE, payload: err});
           },
         );
