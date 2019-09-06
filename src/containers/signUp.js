@@ -4,7 +4,6 @@ import status from '../constants/status';
 import {
   AsyncStorage,
   Text,
-  View,
   StyleSheet,
   TextInput,
   TouchableOpacity,
@@ -100,7 +99,7 @@ export default class SignUp extends Component {
           onPress={this._onPress}
           disabled={isPressed}>
           {isPressed ? (
-            <ActivityIndicator size="small" color="#0000ff" />
+            <ActivityIndicator size="small" color="#a6a6a6" />
           ) : (
             <Text style={styles.buttonText}>{LOGIN}</Text>
           )}

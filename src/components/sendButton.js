@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   enabledButton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#0a68ff',
   },
   disabledButton: {
-    backgroundColor: 'gray',
+    backgroundColor: '#a6a6a6',
   },
 });
 

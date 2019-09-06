@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, KeyboardAvoidingView} from 'react-native';
 import SendButton from '../components/sendButton';
 import Input from '../components/input';
 import firebase from '../firebase';
@@ -39,13 +39,14 @@ export default class InputPanel extends Component {
 
   render() {
     return (
-      <View style={styles.inputBar}>
-        <Input text={this.state.text} onTextInputChange={this._onInputChange} />
-        <SendButton
-          disabled={!this.state.text}
-          onPress={this._onSendButtonPress}
-        />
-      </View>
+      <KeyboardAvoidingView behavior="padding">
+        <View style={styles.inputBar}>
+          <Input text={this.state.text} onTextInputChange={this._onInputChange} />
+          <SendButton
+            disabled={!this.state.text}
+            onPress={this._onSendButtonPress} />
+        </View>
+      </KeyboardAvoidingView>
     );
   }
 }
@@ -55,9 +56,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    backgroundColor: '#dadfea',
     paddingHorizontal: 5,
     paddingVertical: 10,
-    backgroundColor: '#dadfea',
   },
 });
 
